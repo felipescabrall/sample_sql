@@ -208,11 +208,4 @@ insert into endereco values (8,5,'Ajaio da Silva Modeira Pedeira','Travessa','22
 insert into endereco values (9,1,'Rogai Por Nois','Beco','12332',2);
 insert into endereco values (10,2,'Olha nos aqui novamente','Beco','2222',1);
 
-select c.id_cliente , p.id_pedido , sum(p2.valor_produto) as total_pedido from cliente c 
-inner join pedido p 
-on c.id_cliente  = p.id_cliente 
-inner join pedido_produto pp 
-on p.id_pedido = pp.id_pedido 
-inner join produto p2 ON 
-p2.id_produto = pp.id_produto 
-group by c.id_cliente , p.id_pedido 
+
